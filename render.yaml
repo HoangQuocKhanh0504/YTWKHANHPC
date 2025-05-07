@@ -1,8 +1,0 @@
-services:
-  - type: web
-    name: yt-dlp-app
-    env: docker
-    plan: free
-    dockerfilePath: ./Dockerfile
-    buildCommand: npm install
-    startCommand: npm start
