@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>YTWKHANHPC tải Video YouTube</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" href="GD.png">
+  <style>
+    body {
+      background: rgb(255, 0, 0); /* Khởi tạo nền RGB */
+      background: linear-gradient(135deg, rgba(255, 0, 0, 1), rgba(0, 255, 0, 1), rgba(0, 0, 255, 1));
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+    }
+    @keyframes gradient {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+  </style>
+</head>
+<body class="flex items-center justify-center h-screen bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-600">
+  <div class="bg-white p-10 rounded-2xl shadow-lg max-w-lg w-full space-y-6">
+    <h2 class="text-4xl font-semibold text-center text-purple-700">🎥 Tải Video YouTube</h2>
+    <form method="POST" onsubmit="showLoading()" class="space-y-5">
+      <input type="text" name="url" placeholder="Dán link YouTube tại đây..."
+             autocomplete="off"
+             class="w-full p-4 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 transition duration-300 ease-in-out transform hover:scale-105" required>
+      <button type="submit"
+              class="w-full py-4 bg-pink-500 text-white font-semibold rounded-lg hover:bg-pink-600 transition duration-300 ease-in-out transform hover:scale-105">
+        🚀 Lấy thông tin video
+      </button>
+      <div id="loading" class="hidden mt-4 text-center">
+        <p class="text-gray-600 mb-2">Đang xử lý...</p>
+        <div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
+          <div class="h-full bg-pink-400 animate-pulse w-full"></div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    function showLoading() {
+      document.getElementById('loading').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
